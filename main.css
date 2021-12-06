@@ -1,0 +1,157 @@
+/* fonts import */
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+/* variables & fonts */
+:root {
+  --cyan: hsl(179, 62%, 43%);
+  --brightYellow: hsl(71, 73%, 54%);
+  --lightGray: hsl(204, 43%, 93%);
+  --grayishBlue: hsl(218, 22%, 67%);
+  font-size: 16px;
+  font-family: "Karla", sans-serif;
+}
+
+/* Normalization */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* body */
+body {
+  background-color: var(--lightGray);
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr;
+  min-height: 100vh;
+}
+
+/* main */
+main {
+  align-self: end;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 45%;
+  max-width: 500px;
+  border-radius: 7px;
+  overflow: hidden;
+  box-shadow: 1px 1px 20px var(--grayishBlue);
+}
+
+/* join us section */
+.join {
+  grid-column: 1/3;
+  background-color: white;
+  padding: 35px;
+}
+
+.join .join-container h1 {
+  color: var(--cyan);
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.join .join-container h2 {
+  color: var(--brightYellow);
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+
+.join .join-container p {
+  color: var(--grayishBlue);
+  font-size: 12px;
+  line-height: 20px;
+}
+
+/* subscription section */
+.subscription {
+  background-color: hsl(182, 62%, 43%);
+  padding: 35px;
+  color: white;
+}
+
+.subscription .subscription-container h1 {
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.subscription .subscription-container p {
+  font-size: 12px;
+}
+
+.subscription .subscription-container .month {
+  color: rgba(255, 255, 255, 50%);
+  margin-bottom: 10px;
+}
+
+.subscription .subscription-container .access {
+  margin-bottom: 25px;
+}
+
+.subscription .subscription-container p span {
+  font-size: 25px;
+  margin-right: 10px;
+  color: white;
+}
+
+.subscription .subscription-container button {
+  border: none;
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 12px;
+  color: white;
+  background-color: var(--brightYellow);
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px gray;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.subscription .subscription-container button:hover {
+  transform: translateY(-1px);
+  color: var(--lightGray);
+  background-color: hsl(71, 73%, 48%);
+}
+
+.subscription .subscription-container button:active {
+  transform: translate(0);
+  background-color: var(--brightYellow);
+  color: white;
+}
+
+/* why section */
+.why {
+  background-color: hsl(179, 50%, 50%);
+  padding: 35px;
+  color: white;
+}
+
+.why .why-container h1 {
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.why .why-container p {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 65%);
+  line-height: 18px;
+  padding-right: 35px;
+}
+
+@media only screen and (max-width: 1109px) {
+  .why .why-container p {
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 824px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+  }
+  .why .why-container p {
+    padding: 0;
+  }
+}
